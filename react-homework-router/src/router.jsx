@@ -5,8 +5,8 @@ import { moviesTrendingAPI } from './service/MoviesTrendingAPI'
 import { MoviesSearch } from './pages/MoviesSearch'
 import { Movie } from './pages/Movie'
 import { moviesCreditsAPI } from './service/MoviesCreditsAPI'
-import { searchMoviesAPI } from './service/SearchMoviesAPI'
 import { moviesReviewsAPI } from './service/MoviesReviewsAPI'
+import { MovieReviews } from '../src/pages/MovieReviews'
 
 export const router = createBrowserRouter([
     {
@@ -34,7 +34,9 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: '/movies/:movieId/reviews',
+                        element: <MovieReviews/>,
                         loader: moviesReviewsAPI,
+                        
                     }
                 ]
             }

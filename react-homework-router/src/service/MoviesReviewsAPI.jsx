@@ -1,9 +1,6 @@
 import axios from 'axios'
 
 export const moviesReviewsAPI = async ({params}) => {
-    
-
-    
     const options = {
         method: 'GET',
         headers: {
@@ -14,9 +11,8 @@ export const moviesReviewsAPI = async ({params}) => {
 
     const movie = await axios.get(`https://api.themoviedb.org/3/movie/${params.movieId}/reviews?language=en-US&page=1`, options)
     const data = await movie.data
+    console.log(data)
     const result = await data.results
     console.log(result)
     return result
-
-    
 }

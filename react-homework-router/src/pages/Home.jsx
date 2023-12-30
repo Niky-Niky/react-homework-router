@@ -9,7 +9,6 @@ export const Home = () => {
         <>
             <ul>
                 {movies.map((movie) => <li key={movie.id}><NavLink to={`/movies/${movie.id}`}>{movie.title}</NavLink></li>)}
-                {movies.map((movie) => console.log(movie.id))}
             </ul>
         </>
     )

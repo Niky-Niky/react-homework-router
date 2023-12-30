@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom"
+import { NavLink, useLoaderData, useParams } from "react-router-dom"
 
 export const Movie = () => {
     
@@ -17,6 +17,7 @@ export const Movie = () => {
             <p>Popularity: {selectedMovie.popularity}</p>
             <img src={`${selectedMovie.poster_path}`} alt="" />
             <p>Overview: {selectedMovie.overview}</p>
+            <NavLink to={`/movies/${movieId}/reviews`}>Reviews</NavLink>
         </>
     )
 };
